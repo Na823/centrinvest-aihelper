@@ -130,7 +130,7 @@ sessionStorage.setItem(
    CHAT WINDOW
 ======================================================== */
 
-##ci-ai-chat {
+#ci-ai-chat {
     position: fixed !important;
 
     right: 24px !important;
@@ -554,6 +554,73 @@ sessionStorage.setItem(
 
         border-radius: 14px !important;
     }
+
+/* ============================================================
+   ЦЕНТР-ИНВЕСТ AI — РАЗМЕР ОКНА ЧАТА
+   ============================================================ */
+
+#ci-ai-chat {
+    position: fixed !important;
+
+    /* положение */
+    top: auto !important;
+    left: auto !important;
+    right: 24px !important;
+    bottom: 90px !important;
+
+    /* размер */
+    width: 360px !important;
+    height: 510px !important;
+
+    /* запрещаем растягивание */
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    max-width: 360px !important;
+    max-height: 510px !important;
+
+    /* убираем возможные inset */
+    inset: auto 24px 90px auto !important;
+
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+
+    z-index: 2147483647 !important;
+}
+
+
+/* Открытое состояние */
+#ci-ai-chat.ci-open {
+    display: flex !important;
+}
+
+
+/* ============================================================
+   УЗКИЙ ЭКРАН
+   ============================================================ */
+
+@media (max-width: 600px) {
+
+    #ci-ai-chat {
+        left: 12px !important;
+        right: 12px !important;
+
+        bottom: 80px !important;
+
+        width: calc(100vw - 24px) !important;
+        height: calc(100vh - 100px) !important;
+
+        max-width: calc(100vw - 24px) !important;
+        max-height: calc(100vh - 100px) !important;
+
+        inset: auto 12px 80px 12px !important;
+    }
+}
+
+
+
+
 }`;
 
     document.head.appendChild(style);
