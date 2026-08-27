@@ -130,17 +130,20 @@ sessionStorage.setItem(
    CHAT WINDOW
 ======================================================== */
 
-#ci-ai-chat {
+##ci-ai-chat {
     position: fixed !important;
 
     right: 24px !important;
-    bottom: ${BUTTON_BOTTOM + 70}px !important;
+    bottom: 90px !important;
 
-    width: 360px !important;
-    height: 510px !important;
+    width: min(360px, calc(100vw - 32px)) !important;
+    height: min(510px, calc(100vh - 120px)) !important;
 
     max-width: calc(100vw - 32px) !important;
-    max-height: calc(100vh - 100px) !important;
+    max-height: calc(100vh - 120px) !important;
+
+    min-width: 280px !important;
+    min-height: 350px !important;
 
     background: #ffffff !important;
 
